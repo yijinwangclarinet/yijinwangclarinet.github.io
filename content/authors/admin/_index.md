@@ -10,11 +10,11 @@ last_name: Wang
 superuser: true
 
 # Role/position
-role: Professor of Artificial Intelligence
+role: 
 
 # Organizations/Affiliations
 organizations:
-  - name: Stanford University
+  - name: 
     url: ''
 
 # Short bio (displayed in user profile at end of posts)
@@ -27,15 +27,15 @@ interests:
 
 education:
   courses:
-    - course: PhD in Artificial Intelligence
-      institution: Stanford University
-      year: 2012
-    - course: MEng in Artificial Intelligence
-      institution: Massachusetts Institute of Technology
-      year: 2009
-    - course: BSc in Artificial Intelligence
-      institution: Massachusetts Institute of Technology
-      year: 2008
+    - course: DMA in Clarinet Performance
+      institution: UCLA Herb Alpert School of Music
+      year: 2025
+    - course: Master in Clarinet Performance 
+      institution: San Francisco Conservatory of Music
+      year: 2022
+    - course: Bachelor in Clarinet Performance 
+      institution: San Francisco Conservatory of Music
+      year: 2020
 
 # Social/Academic Networking
 # For available icons, see: https://docs.hugoblox.com/getting-started/page-builder/#icons
