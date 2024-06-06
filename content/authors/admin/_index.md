@@ -1,10 +1,10 @@
 ---
 # Display name
-title: Nelson Bighetti
+title: Yijin Wang
 
 # Full Name (for SEO)
-first_name: Nelson
-last_name: Bighetti
+first_name: Yijin
+last_name: Wang
 
 # Is this the primary user of the site?
 superuser: true
