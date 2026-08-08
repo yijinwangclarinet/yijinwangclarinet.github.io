@@ -58,8 +58,39 @@ if (galleryLightbox) {
 
 const contactForm = document.querySelector('#contact-form');
 if (contactForm) {
-  contactForm.addEventListener('submit', (event) => {
+  const formStatus = contactForm.querySelector('.form-status');
+  const submitButton = contactForm.querySelector('button[type="submit"]');
+
+  contactForm.addEventListener('submit', async (event) => {
     event.preventDefault();
-    contactForm.querySelector('.form-status').textContent = 'This form is not connected yet. Please email yijinwangclarinet@gmail.com.';
+    formStatus.textContent = 'Sending your message…';
+    submitButton.disabled = true;
+    submitButton.setAttribute('aria-busy', 'true');
+
+    try {
+      const formData = new FormData(contactForm);
+      const formValues = Object.fromEntries(formData);
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json'
+        },
+        body: JSON.stringify(formValues)
+      });
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        throw new Error(result.message || 'Submission failed');
+      }
+
+      formStatus.textContent = 'Thank you. Your message has been sent successfully.';
+      contactForm.reset();
+    } catch (error) {
+      formStatus.textContent = 'Sorry, your message could not be sent. Please try again or email yijinwangclarinet@gmail.com.';
+    } finally {
+      submitButton.disabled = false;
+      submitButton.removeAttribute('aria-busy');
+    }
   });
 }

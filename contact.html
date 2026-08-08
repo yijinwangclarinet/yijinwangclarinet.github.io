@@ -16,15 +16,17 @@
         <p><span>Location</span>Orlando Area, Florida</p>
       </div>
     </section>
-    <!-- Add a form-service action and method here when the site is ready to send messages. -->
-    <form class="contact-form reveal" id="contact-form">
+    <form class="contact-form reveal" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="513f6257-9b0b-4104-abbb-b3676f560df3">
+      <input type="hidden" name="from_name" value="Yijin Wang Website Contact Form">
+      <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
       <label>Name<input type="text" name="name" autocomplete="name" required placeholder="Your name"></label>
       <label>Email<input type="email" name="email" autocomplete="email" required placeholder="you@example.com"></label>
       <label>Subject<input type="text" name="subject" required placeholder="Subject"></label>
       <label>Message<textarea name="message" rows="5" required placeholder="Tell me a little about your inquiry"></textarea></label>
-      <button type="submit">Send message <span aria-hidden="true">↗</span></button><p class="form-status" role="status"></p>
+      <button type="submit">Send message <span aria-hidden="true">↗</span></button><p class="form-status" role="status" aria-live="polite"></p>
     </form>
   </main>
-  <script src="script.js"></script>
+  <script src="script.js?v=20260808-32"></script>
 </body>
 </html>
